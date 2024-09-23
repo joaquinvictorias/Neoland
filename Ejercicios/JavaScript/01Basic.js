@@ -46,8 +46,8 @@ const car1 = {name: 'BMW m&m', basePrice: 50000, finalPrice: 60000};
 const car2 = {name: 'Chevrolet Corbina', basePrice: 70000, finalPrice: 80000};
 
 globalBasePrice = 25000;
-car1.finalPrice = car1.basePrice + globalBasePrice
-car2.finalPrice = car2.basePrice + globalBasePrice
+car1.finalPrice = car1.basePrice + globalBasePrice;
+car2.finalPrice = car2.basePrice + globalBasePrice;
 
 //* Iteración #3: Operadores
 
@@ -94,20 +94,20 @@ console.log(avengers.length);
 //? 1.4
 
 const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
-rickAndMortyCharacters.push("Morty", "Summer")
+rickAndMortyCharacters.push("Morty", "Summer");
 console.log(rickAndMortyCharacters[rickAndMortyCharacters.length - 1]);
 
 //? 1.5
 
 const rickAndMortyCharacters2 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
-rickAndMortyCharacters2.pop()
+rickAndMortyCharacters2.pop();
 console.log(`Primer elemento: ${rickAndMortyCharacters2[0]}
 Último elemento: ${rickAndMortyCharacters2[rickAndMortyCharacters2.length - 1]}`);
 
 //? 1.6
 
 const rickAndMortyCharacters3 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
-rickAndMortyCharacters3.splice(1, 1)
+rickAndMortyCharacters3.splice(1, 1);
 console.log(rickAndMortyCharacters3);
 
 //* Iteración #5: Condicionales

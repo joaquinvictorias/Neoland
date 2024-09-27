@@ -125,9 +125,9 @@ const nameFinder = [
 
 function finderName(param, name) {
     if (param.includes(name) === true) {
-        return (`Existe: ${param.includes(name)}\nPosición: ${param.indexOf(name)}`);
+        return `Existe: ${param.includes(name)}\nPosición: ${param.indexOf(name)}`;
     } else {
-        return (`Existe: ${param.includes(name)}`);
+        return `Existe: ${param.includes(name)}`;
     }
 }
 

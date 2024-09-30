@@ -150,8 +150,16 @@ const counterWords = [
 ];
 
 function repeatCounter(param) {
+    let contador = {};
     for (const p of param) {
-        console.log(`${p} se repite: ${param.filter(word => word === p).length} veces`);
+        if (contador[p] !== undefined) {
+            contador[p] += 1;
+        } else {
+            contador[p] = 1;
+        }
+    }
+    for (const c in contador) {
+        console.log(`${c} se repite ${contador[c]} veces`);
     }
 }
 

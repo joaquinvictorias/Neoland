@@ -23,7 +23,7 @@ console.log(movies2);
 
 //* Iteración #2: Mix Fors
 
-/* const users = [
+const users = [
     {name: 'Manolo el del bombo',
         favoritesSounds: {
             waves: {format: 'mp3', volume: 50},
@@ -54,15 +54,21 @@ console.log(movies2);
     },
 ];
 
-for (const user of users) {
-    for (const sound in user.favoritesSounds) {
-        console.log(sound);
+function mediaVolumen(param) {
+    let volumenes = [];
+    for (const p of param) {
+        for (const i of Object.values(p.favoritesSounds)) {
+            volumenes.push(i.volume);
+        }
     }
-} */
+    return volumenes.reduce((acc, num) => acc + num, 0) / volumenes.length;
+}
+
+console.log(mediaVolumen(users));
 
 //* Iteración #3: Mix Fors
 
-/* const users2 = [
+const users2 = [
     {name: 'Manolo el del bombo',
         favoritesSounds: {
             waves: {format: 'mp3', volume: 50},
@@ -91,7 +97,29 @@ for (const user of users) {
             firecamp: {format: 'mp3', volume: 60},
         }
     },
-]; */
+];
+
+function sonidosRepetidos(param) {
+    let sonidos = [];
+    for (const p of param) {
+        for (const i in p.favoritesSounds) {
+            sonidos.push(i);
+        }
+    }
+    let contador = {};
+    for (const sonido of sonidos) {
+        if (contador[sonido] !== undefined) {
+            contador[sonido] += 1;
+        } else {
+            contador[sonido] = 1;
+        }
+    }
+    for (const c in contador) {
+        console.log(`${c} se repite ${contador[c]} veces`);
+    }
+}
+
+sonidosRepetidos(users2);
 
 //* Iteración #4: Métodos findArrayIndex
 
@@ -114,6 +142,8 @@ console.log(findArrayIndex(animales, "Saltamontes"));
 function rollDice(caras) {
     return Math.ceil(Math.random() * caras);
 }
+
+console.log(rollDice(6));
 
 //* Iteración #6: Función swap
 

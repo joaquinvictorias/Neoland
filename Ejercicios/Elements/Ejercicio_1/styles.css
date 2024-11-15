@@ -1,0 +1,8 @@
+/* Estilos para el div */
+#colorBox {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /* Color de fondo inicial */
+    margin: 20px;
+}

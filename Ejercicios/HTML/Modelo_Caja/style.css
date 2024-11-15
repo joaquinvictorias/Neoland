@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+header,
+nav {
+    background-color: #ffa600;
+}
+
+nav {
+    padding-top: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    color: white;
+    margin: 0;
+    padding: 10px 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav ul li.active a {
+    background-color: #006599;
+    padding-left: 310px;
+    padding-right: 310px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+nav ul li.active a:hover {
+    color: #ffa600;
+}
+
+nav ul li.inactive a {
+    background-color: #ffa600;
+    padding-left: 310px;
+    padding-right: 310px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+nav ul li.inactive a:hover {
+    color: #006599;
+}
+
+section#skills {
+    padding-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    gap: 15px;
+    /* Añade espacio entre los elementos */
+}
+
+#skills ul li {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#skills ul li:hover {
+    background-color: darkorange;
+}
+
+footer p {
+    text-align: center;
+    background-color: #0099cc;
+    color: #ffffff;
+    padding: 20px;
+}
+
+h2 {
+    color: #0099cc;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-right: 20px;
+    color: #ffffff;
+    background-color: #ffa600;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+li a {
+    color: #ffffff;
+}
+
+p {
+    margin-left: 12vw;
+    margin-right: 12vw;
+    padding-top: 30px;
+}
+
+#logo-naruto {
+    display: block;
+    margin: auto;
+    width: 12vw;
+    height: 12vh;
+    padding-top: 15px;
+}
+
+#naruto-foto {
+    display: block;
+    margin: auto;
+    width: 15vw;
+    height: 20vh;
+}
+
+footer {
+    background-color: #0099cc;
+    color: #ffffff;
+}

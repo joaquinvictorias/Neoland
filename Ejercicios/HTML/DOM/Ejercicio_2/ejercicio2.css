@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif; /* Fuente para todo el cuerpo de la página */
+}
+
+#cuadro {
+  width: 200px; /* Ancho fijo del cuadro */
+  height: 200px; /* Altura fija del cuadro */
+  background-color: lightblue; /* Color de fondo inicial del cuadro */
+  margin-top: 20px; /* Espacio superior entre el botón y el cuadro */
+}
+
+button {
+  padding: 10px 15px; /* Relleno interno del botón */
+  background-color: #007bff; /* Color de fondo azul del botón */
+  color: white; /* Color de texto en blanco */
+  border: none; /* Eliminamos el borde por defecto */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  cursor: pointer; /* Cambia el cursor a una "mano" al pasar por el botón */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cambia el color del botón al pasar el mouse por encima */
+}

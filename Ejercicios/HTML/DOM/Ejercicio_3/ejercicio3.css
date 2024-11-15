@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente para el cuerpo de la página */
+  }
+  
+  button {
+    padding: 10px 15px; /* Relleno interno del botón */
+    margin: 5px; /* Espaciado entre los botones */
+    background-color: #17a2b8; /* Color de fondo azul claro del botón */
+    color: white; /* Texto en blanco */
+    border: none; /* Eliminamos el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar por el botón */
+  }
+  
+  button:hover {
+    background-color: #138496; /* Cambia el color del botón al pasar el mouse */
+  }
+  
+  ul {
+    margin-top: 20px; /* Espacio superior entre los botones y la lista */
+    list-style-type: disc; /* Estilo de lista con viñetas */
+  }

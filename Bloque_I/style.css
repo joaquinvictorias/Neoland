@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+}
+
+#type-filter {
+    padding: 8px;
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.card img {
+    max-width: 100%;
+    max-width: 8rem;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.pagination-button.active {
+    background-color: #0073e6;
+    color: white;
+}
+
+#toggle-dark-mode {
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .card {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode #search {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+}
+
+.dark-mode #type-filter {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+}

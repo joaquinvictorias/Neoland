@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente para todo el cuerpo de la página */
+  }
+  
+  #contenedor {
+    margin-top: 20px; /* Espacio superior del contenedor donde se añadirán los párrafos */
+  }
+  
+  button {
+    padding: 10px 15px; /* Relleno interno del botón para que sea más grande */
+    background-color: #28a745; /* Color de fondo verde del botón */
+    color: white; /* Color de texto del botón en blanco */
+    border: none; /* Eliminamos el borde por defecto del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor a una "mano" al pasar por el botón */
+  }
+  
+  button:hover {
+    background-color: #218838; /* Cambia el color del botón al pasar el mouse por encima */
+  }

@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(135deg,
+            #74ebd5,
+            #acb6e5);
+    /* Degradado suave y limpio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra ligera */
+    max-width: 400px;
+    /* Tamaño más amplio */
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #333;
+    /* Color oscuro para el texto */
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #74ebd5;
+    /* Color que hace juego con el degradado */
+    outline: none;
+}
+
+button {
+    background-color: #3b8070;
+    /* Botón color menta */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #2f6559;
+    /* Color más oscuro al hacer hover */
+    transform: translateY(-3px);
+    /* Pequeño efecto de elevación */
+}
+
+#error-message {
+    color: #ff4d4d;
+    /* Rojo para los errores */
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.extra-options {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.extra-options a {
+    color: #2f6559;
+    text-decoration: none;
+}
+
+.extra-options a:hover {
+    color: #57c4ab;
+}

@@ -1,4 +1,5 @@
 import { setSessionData, redirectToDashboard } from "./common.js";
+import { validUser } from "./validUser.js";
 
 function validateLogin(email, password, validUser) {
     return email === validUser.email && password === validUser.password;
@@ -22,11 +23,6 @@ function initializeLoginForm() {
     const loginForm = document.getElementById("loginForm");
     const errorMessage = document.getElementById("error-message");
 
-    const validUser = {
-        email: "admin@gmail.com",
-        password: "password123",
-    };
-
     loginForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -35,10 +31,15 @@ function initializeLoginForm() {
 
         validateLogin(email, password, validUser)
             ? handleLoginSuccess(email)
-            : displayError(errorMessage, "Email o contraseña incorrectos.");
+            : displayError(errorMessage, "Incorrect email or password.");
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeLoginForm();
+});
+
+document.getElementById("myLink").addEventListener("click", (event) => {
+    event.preventDefault();
+    window.alert(`Email: ${validUser.email}\nPassword: ${validUser.password}`);
 });

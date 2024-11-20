@@ -1,0 +1,99 @@
+:root {
+    --input-field-background: #eaeaea;
+    --form-color: #3c00a0;
+    --button-disable-color: #555;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(./utils/pokemon-background-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white-color);
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: var(--form-color);
+    position: relative;
+}
+
+.input-field {
+    background: var(--input-field-background);
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    opacity: 0.5;
+}
+
+form p {
+    text-align: center;
+    font-size: 13px;
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--form-color);
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: var(--form-color);
+    color: var(--white-color);
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.input-group {
+    height: 180px;
+}

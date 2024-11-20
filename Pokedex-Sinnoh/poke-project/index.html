@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./utils/pokeball.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Sign In</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="email" id="email" placeholder="Email" autocomplete="on" required>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" id="password" placeholder="Password" autocomplete="off" required>
+                    </div>
+                    <p>Lost email or password <a href="#" id="myLink" target="_blank">Click here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signinBtn">Sign In</button>
+                </div>
+            </form>
+            <p id="error-message" style="display: none; color: red; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+
+</html>

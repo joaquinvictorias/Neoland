@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../utils/pokeball.ico">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Pokédex</h1>
+            <input type="search" id="search" placeholder="Search Pokémon...">
+            <select id="type-filter">
+                <option value="">All Types</option>
+            </select>
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        </header>
+        <main id="pokemon-container"></main>
+        <div id="pagination"></div>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="./components/Togglebutton/togglebutton.js"></script>
+</body>
+
+</html>

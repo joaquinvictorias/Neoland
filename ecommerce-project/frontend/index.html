@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - Navegación</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Página Principal</h1>
+    <p>Haz click en los botones para navegar a las diferentes páginas:</p>
+
+    <!-- Contenedor de botones -->
+    <div class="button-container">
+        <button onclick="navigateTo('product.html')">Ir a Productos</button>
+        <button onclick="navigateTo('order.html')">Ir a Pedidos</button>
+        <button onclick="navigateTo('user.html')">Ir a Usuarios</button>
+    </div>
+
+    <script>
+        // Función para redirigir a las páginas
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>

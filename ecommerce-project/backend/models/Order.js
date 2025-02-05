@@ -6,11 +6,18 @@ const orderSchema = new mongoose.Schema(
         products: [
             {
                 product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
-                quantity: { type: Number, required: true }
+                quantity: { type: Number, required: true },
+                size: { type: String, default: "M", enum: ["XS", "S", "M", "L", "XL"], required: true }
             }
         ],
         totalPrice: { type: Number, required: true },
-        status: { type: String, default: "Pending", enum: ["Pending", "Shipped", "Delivered"], required: true }
+        status: { type: String, default: "Pending", enum: ["Pending", "Shipped", "Delivered"], required: true },
+        name: { type: String, required: true },
+        email: { type: String, required: true },
+        street: { type: String, required: true },
+        postalCode: { type: String, required: true },
+        city: { type: String, required: true },
+        phone: { type: String, required: true }
     },
     { timestamps: true }
 );

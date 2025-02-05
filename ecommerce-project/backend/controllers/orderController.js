@@ -49,12 +49,22 @@ const createOrder = async (req, res) => {
     session.startTransaction();
 
     try {
-        const { user, products, status } = req.body;
+        const {
+            user,
+            products,
+            status,
+            name,
+            email,
+            street,
+            postalCode,
+            city,
+            phone
+        } = req.body;
 
         if (!mongoose.isValidObjectId(user)) {
             return sendErrorResponse(res, 400, "fail", "Invalid user ID");
         }
-        
+
         const existingUser = await User.findById(user);
 
         if (!existingUser) {
@@ -67,7 +77,7 @@ const createOrder = async (req, res) => {
             if (!mongoose.isValidObjectId(item.product)) {
                 return sendErrorResponse(res, 400, "fail", "Invalid product ID");
             }
-            
+
             const product = await Product.findById(item.product).session(session);
 
             if (!product) {
@@ -83,7 +93,20 @@ const createOrder = async (req, res) => {
             await product.save({ session });
         }
 
-        const order = await Order.create([{ user, products, totalPrice, status }], { session });
+        const order = await Order.create(
+            [{
+                user,
+                products,
+                totalPrice,
+                status,
+                name,
+                email,
+                street,
+                postalCode,
+                city,
+                phone
+            }], { session }
+        );
 
         await session.commitTransaction();
         session.endSession();
@@ -115,7 +138,18 @@ const updateOrder = async (req, res) => {
     session.startTransaction();
 
     try {
-        const { user, products, status } = req.body;
+        const {
+            user,
+            products,
+            status,
+            name,
+            email,
+            street,
+            postalCode,
+            city,
+            phone
+        } = req.body;
+
         const { id } = req.params;
 
         if (!mongoose.isValidObjectId(id)) {
@@ -142,7 +176,7 @@ const updateOrder = async (req, res) => {
             if (!mongoose.isValidObjectId(item.product)) {
                 return sendErrorResponse(res, 400, "fail", "Invalid product ID");
             }
-            
+
             const product = await Product.findById(item.product).session(session);
 
             if (!product) {
@@ -175,6 +209,12 @@ const updateOrder = async (req, res) => {
         order.totalPrice = totalPrice;
         order.user = user;
         order.status = status;
+        order.name = name;
+        order.email = email;
+        order.street = street;
+        order.postalCode = postalCode;
+        order.city = city;
+        order.phone = phone;
 
         await order.save({ session });
 
@@ -185,7 +225,7 @@ const updateOrder = async (req, res) => {
     } catch (error) {
         await session.abortTransaction();
         session.endSession();
-        
+
         console.error(error);
 
         if (error.name === "ValidationError") {

@@ -18,6 +18,6 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/orders", orderRouter);
-app.use("/", (res) => res.send("Hola"))
+app.use("/", (req, res) => res.status(200).json("Hola"))
 
 module.exports = app;
